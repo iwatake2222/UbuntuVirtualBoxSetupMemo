@@ -1,6 +1,13 @@
 # Virtual Box
 
 ## settings
+* Install "VirtualBox Guest Additions" from "Insert Guest Additions CD image" in "Device" on menu bar
+* System -> Motherboard -> Base Memory
+* System -> Motherboard -> Chipset = ICH9
+* System -> Motherboard -> Enable I/O APIC
+* System -> Processor -> Extended Features -> Enable PAE/NX
+* System -> Acceleration -> KVM
+* Display -> Screen -> Enable 3Dd Acceleration
 
 ## shared folder
 create folde in windows  
