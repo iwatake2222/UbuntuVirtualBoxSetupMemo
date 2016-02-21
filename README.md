@@ -13,9 +13,9 @@
 * create folde in windows  
 * vbox->settings->shared folders->machine folders->add (auto mount, permanent)  
 * mount
-> %> sudo mkdir /mnt/shared
-> %> sudo chmod 777 /mnt/shared/
-> %> sudo mount -t vboxsf Ubuntu /mnt/shared
+%> sudo mkdir /mnt/shared  
+%> sudo chmod 777 /mnt/shared/  
+%> sudo mount -t vboxsf Ubuntu /mnt/shared  
 
 # Ubuntu
 
@@ -27,9 +27,10 @@ System settings -> Appearance -> Behaviors -> enable workspaces
 
 ## Hot keys (Caps to Cursor)
 * Change key bindings
-> %> mkdir ~/.xkb/keymap/
-> %> mkdir ~/.xkb/symbols/
-> %> subl ~/.xkb/symbols/mykbd &
+
+%> mkdir ~/.xkb/keymap/  
+%> mkdir ~/.xkb/symbols/  
+%> subl ~/.xkb/symbols/mykbd &  
 ```mykbd
 xkb_keymap {
     xkb_keycodes  { include "evdev+aliases(qwerty)" };
@@ -39,14 +40,14 @@ xkb_keymap {
     xkb_geometry  { include "pc(pc105)" };
 };
 ```
-> %> subl ~/.xkb/symbols/myswap &
+%> subl ~/.xkb/symbols/myswap &  
 ```myswap
 partial modifier_keys
 xkb_symbols "swapkeys" {
   replace key <CAPS> {[ Meta_L ] };
 };
 ```
-> %> subl /usr/share/X11/xkb/symbols/pc &
+%> subl /usr/share/X11/xkb/symbols/pc &  
 ```pc
     key <ALT>  {	[ NoSymbol, Alt_L	]	};
     include "altwin(meta_alt)"
@@ -57,7 +58,7 @@ xkb_symbols "swapkeys" {
     modifier_map Mod2   { <META> };
 ```
 
-%> subl /usr/share/X11/xkb/symbols/altwin & 
+%> subl /usr/share/X11/xkb/symbols/altwin &  
 ```altwin
 partial modifier_keys 
 xkb_symbols "meta_alt" {
@@ -71,8 +72,8 @@ xkb_symbols "meta_alt" {
 };
 ```
 
-*  load the setting
-> %> subl .mystartup &
+* load the setting
+%> subl .mystartup &  
 ``` .mystartup
 #xkbcomp -I$HOME/.xkb ~/.xkb/keymap/mykbd $DISPLAY 2> /dev/null
 ```
@@ -81,11 +82,11 @@ chmod a+x .mystartup
 register into gnome-session-properties
 
 
-> set hot keys using Autokey
-- install Autokey using software center
-- set hotkeys like the following:
-keyboard.send_key("<left>")
-- register into gnome-session-properties
+* set hot keys using Autokey
+ - install Autokey using software center
+ - set hotkeys like the following:
+    keyboard.send_key("<left>")
+-  register into gnome-session-properties
 
 ## Caps to Ctrl
 %> subl /etc/default/keyboard  
