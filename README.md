@@ -9,13 +9,28 @@
 * System -> Acceleration -> KVM
 * Display -> Screen -> Enable 3Dd Acceleration
 
+## setting files in ubuntu
+```/etc/rc.local
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+echo "/etc/rc.local"
+xkbcomp -I$HOME/.xkb ~/.xkb/keymap/mykbd $DISPLAY 2> /dev/null
+mount -t vboxsf Ubuntu /mnt/shared/
+```
+
+```/etc/profile.d/mysetup.sh (new file)
+#!/bin/sh
+echo "/etc/profile.d/mysetup.sh"
+xkbcomp -I$HOME/.xkb ~/.xkb/keymap/mykbd $DISPLAY 2> /dev/null
+```
+
 ## shared folder
 * create folde in windows  
 * vbox->settings->shared folders->machine folders->add (auto mount, permanent)  
-* mount
+* create directory in ubuntu  
 %> sudo mkdir /mnt/shared  
 %> sudo chmod 777 /mnt/shared/  
-%> sudo mount -t vboxsf Ubuntu /mnt/shared  
+* auto mount. add the following into /etc/rc.local  
+> mount -t vboxsf Ubuntu /mnt/shared  
 
 # Ubuntu
 
