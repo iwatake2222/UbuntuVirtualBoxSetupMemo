@@ -1,0 +1,21 @@
+[
+
+	{ "keys": ["alt+shift+up"], "command": "select_lines", "args": {"forward": false} },
+	{ "keys": ["alt+shift+down"], "command": "select_lines", "args": {"forward": true} }, 
+
+	{ "keys": ["ctrl+shift+m"], "command": "toggle_record_macro" },
+	{ "keys": ["ctrl+m"], "command": "run_macro" },
+
+	{ "keys": ["ctrl+["], "command": "jump_back" },
+	{ "keys": ["ctrl+]"], "command": "jump_forward" },
+
+	{ "keys": ["ctrl+shift+up"],
+		"command": "set_layout",
+		"args":
+		{
+			"cols": [0.0, 1.0],
+			"rows": [0.0, 1.0],
+			"cells": [[0, 0, 1, 1]]
+		}
+	}
+]
