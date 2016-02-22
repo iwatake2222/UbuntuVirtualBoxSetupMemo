@@ -10,14 +10,15 @@
 * Display -> Screen -> Enable 3Dd Acceleration
 
 ## setting files in ubuntu
-```/etc/rc.local
+
+```script:/etc/rc.local
 PATH=/sbin:/bin:/usr/sbin:/usr/bin
 echo "/etc/rc.local"
 xkbcomp -I$HOME/.xkb ~/.xkb/keymap/mykbd $DISPLAY 2> /dev/null
 mount -t vboxsf Ubuntu /mnt/shared/
 ```
 
-```/etc/profile.d/mysetup.sh(new_file)
+```script:/etc/profile.d/mysetup.sh(new_file)
 #!/bin/sh
 echo "/etc/profile.d/mysetup.sh"
 xkbcomp -I$HOME/.xkb ~/.xkb/keymap/mykbd $DISPLAY 2> /dev/null
