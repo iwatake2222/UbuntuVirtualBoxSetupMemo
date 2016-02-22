@@ -11,6 +11,14 @@
 
 ## setting files in ubuntu
 
+/etc/init.d/rc.local 
+```
+,,,
+echo "/etc/init.d/rc.local"
+xkbcomp -I$HOME/.xkb ~/.xkb/keymap/mykbd $DISPLAY 2> /dev/null
+mount -t vboxsf Ubuntu /mnt/shared/
+```
+
 /etc/rc.local
 ```
 PATH=/sbin:/bin:/usr/sbin:/usr/bin
