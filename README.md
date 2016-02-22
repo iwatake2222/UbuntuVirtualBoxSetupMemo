@@ -11,14 +11,16 @@
 
 ## setting files in ubuntu
 
-```console:/etc/rc.local
+/etc/rc.local
+```
 PATH=/sbin:/bin:/usr/sbin:/usr/bin
 echo "/etc/rc.local"
 xkbcomp -I$HOME/.xkb ~/.xkb/keymap/mykbd $DISPLAY 2> /dev/null
 mount -t vboxsf Ubuntu /mnt/shared/
 ```
 
-```console:/etc/profile.d/mysetup.sh(new_file)
+/etc/profile.d/mysetup.sh (new_file)
+```
 #!/bin/sh
 echo "/etc/profile.d/mysetup.sh"
 xkbcomp -I$HOME/.xkb ~/.xkb/keymap/mykbd $DISPLAY 2> /dev/null
