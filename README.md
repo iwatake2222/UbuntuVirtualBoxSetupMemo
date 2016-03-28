@@ -123,12 +123,13 @@ System settings->Language Support->Install Japanese
 Text Entry setting -> Add (Japanese(Anthy))  
 
 ## .bashrc
+```
 %> subl .bashrc
 else
     #PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
     PS1='${debian_chroot:+($debian_chroot)}\w\$ '
 fi
-
+```
 
 # tools
 
